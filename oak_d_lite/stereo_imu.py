@@ -61,7 +61,7 @@ class StereoInertialBridge(Node):
         self.right_pub = self.create_publisher(Image, '/camera/right/image_raw', 1)
         self.left_info_pub = self.create_publisher(CameraInfo, 'left/camera_info', 1)
         self.right_info_pub = self.create_publisher(CameraInfo, 'right/camera_info', 1)
-        self.imu_pub = self.create_publisher(Imu, '/imu', 1)
+        self.imu_pub = self.create_publisher(Imu, 'imu/data_raw', 1)
 
         # bridge
         self.bridge = CvBridge()
